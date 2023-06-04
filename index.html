@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moedas</title>
+</head>
+<body>
+  <h1>Conversor de Moedas</h1>
+  <main>
+    <section id="selectArea">
+      <div class="currency-to-convert">
+        <select name="my-select1" id="my-select1"></select>
+      </div>
+      <div class="currency-to-convert">
+        <select name="my-select2" id="my-select2"></select>
+      </div>
+    </section>
+    <section>
+      <div class="value-for-calculation">
+        <label for="input-number">Valor para Conversão:</label>
+        <input type="number" name="input-number" value="1" id="input-number" min="1">
+      </div>
+    </section>
+    <section id="showing-result">
+      <div class="showInDisplayCalc"></div>
+    </section>
+    <section id="error-mess">
+    </section>
+  </main>
+  <article id="real-exchange-rate">
+    <div class="real-exchange-rate-display"></div>
+  </article>
+  <script src="index.js"></script>
+</body>
+</html>
