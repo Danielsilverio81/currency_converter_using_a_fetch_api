@@ -1,5 +1,56 @@
 @use 'rules/includeHome' as inc;
+
+* {@include inc.resetStyles(0, 0, border-box)}
+
+body {
+  background-color: inc.$backgroundPageLight;
+  color: inc.$backgroundPageDark;
+  width: 100%;
+
+  h1 {
+    margin: 30px auto;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 2px inc.$backgroundBoxValue;
+  }
+}
+
 .dark {
-  background-color: inc.$backgroundPageDark;
-  color: inc.$lettersColorDark;
+    background-color: inc.$backgroundPageDark;
+    color: inc.$lettersColorDark;
+
+  .my-select1, .my-select2 {
+    background-color: inc.$backgroundBoxCoins;
+  }
+}
+
+main {
+  padding-top: 100px;
+  @include inc.displayFlex(flex, center, center);
+  flex-direction: column;
+  gap: 20px;
+
+  #selectArea {
+    @include inc.displayFlex(flex, center, center);
+  }
+
+  .my-select1, .my-select2 {
+    width: 60px;
+  }
+
+  .value-for-calculation {
+    label {
+      font-size: 20px;
+      margin: 0 10px;
+    }
+
+    input[type=number] {
+      width: 60px;
+      padding: 6px;
+      font-size: 19px;
+      background-color: inc.$backgroundBoxValue;
+      color: inc.$numberForValueColor;
+      text-shadow: 1px 1px 1px  rgb(7, 7, 116);
+    }
+  }
 }
