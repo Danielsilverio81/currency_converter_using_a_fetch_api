@@ -7,13 +7,18 @@
 body {
   background-color: #CDC1C5;
   color: #1C1C1C;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
 }
 body h1 {
+  width: 60%;
   margin: 30px auto;
   font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
   text-align: center;
-  text-shadow: 2px 2px 2px #EEE8AA;
+  border-bottom: 2px solid #008B45;
+  text-shadow: 1px 1px 1px #EEE8AA;
 }
 
 .dark {
@@ -36,13 +41,20 @@ main #selectArea {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.7em;
 }
-main .my-select1, main .my-select2 {
-  width: 60px;
+main select {
+  width: 100px;
+  padding: 15px;
+  background-color: #6495ED;
+  color: #008B45;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #1C1C1C;
 }
 main .value-for-calculation label {
   font-size: 20px;
   margin: 0 10px;
+  text-shadow: 1px 1px 1px #EEE8AA;
 }
 main .value-for-calculation input[type=number] {
   width: 60px;
@@ -51,6 +63,26 @@ main .value-for-calculation input[type=number] {
   background-color: #EEE8AA;
   color: #008B45;
   text-shadow: 1px 1px 1px rgb(7, 7, 116);
+}
+
+span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #00FF7F;
+  text-shadow: 1px 1px 1px rgb(7, 7, 116);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+article .real-exchange-rate-display {
+  text-align: center;
+  background-color: #6495ED;
+  width: 35%;
+  height: auto;
+  padding: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

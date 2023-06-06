@@ -18,7 +18,7 @@ export function createErrorMessage(messageError) {
   deleteMessageError()
 }
 
-export function deleteMessageError() {
+function deleteMessageError() {
   const alertError = document.querySelector('.alert-error')
   const xBtn = document.querySelector('.btn-delete-mess')
   xBtn.addEventListener('click', (e) => {

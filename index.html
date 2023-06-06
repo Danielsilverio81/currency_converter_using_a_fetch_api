@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/">
+  <link rel="stylesheet" href="src/css/style.css">
   <title>Conversor de Moedas</title>
 </head>
 <body class="theme">
@@ -12,10 +12,14 @@
   <main>
     <section id="selectArea">
       <div class="currency-to-convert">
-        <select name="my-select1" id="my-select1"></select>
+        <select name="my-select1" id="my-select1">
+          <option value="usd">USD</option>
+        </select>
       </div>
       <div class="currency-to-convert">
-        <select name="my-select2" id="my-select2"></select>
+        <select name="my-select2" id="my-select2">
+          <option value="brl">BRL</option>
+        </select>
       </div>
     </section>
     <section>
@@ -25,14 +29,18 @@
       </div>
     </section>
     <section id="showing-result">
-      <div class="showInDisplayCalc"></div>
+      <div class="showInDisplayCalc">
+        <span>4.96BRL</span>
+      </div>
     </section>
     <section id="error-mess">
     </section>
   </main>
   <article id="real-exchange-rate">
-    <div class="real-exchange-rate-display"></div>
+    <div class="real-exchange-rate-display">
+      <span>1 USD = 4.9567 BRL</span>
+    </div>
   </article>
-  <script src="index.js"></script>
+  <script src="src/js/" type="module"></script>
 </body>
 </html>

@@ -1,5 +1,0 @@
-export const selectPlace1 = document.querySelector('#my-select1')
-export const selectPlace2 = document.querySelector('#my-select2')
-export let displayForCalc = document.querySelector('.showInDisplayCalc')
-export let realExchangeRate = document.querySelector('.real-exchange-rate-display')
-export const valueForCalculation = document.getElementById('input-number')

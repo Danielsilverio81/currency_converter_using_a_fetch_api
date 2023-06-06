@@ -5,13 +5,18 @@
 body {
   background-color: inc.$backgroundPageLight;
   color: inc.$backgroundPageDark;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
 
   h1 {
+    width: 60%;
     margin: 30px auto;
     font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
     text-align: center;
-    text-shadow: 2px 2px 2px inc.$backgroundBoxValue;
+    border-bottom: 2px solid inc.$numberForValueColor;
+    @include inc.textS(inc.$backgroundBoxValue);
   }
 }
 
@@ -32,16 +37,23 @@ main {
 
   #selectArea {
     @include inc.displayFlex(flex, center, center);
+    gap: 1.7em;
   }
 
-  .my-select1, .my-select2 {
-    width: 60px;
+  select {
+    width: 100px;
+    padding: 15px;
+    background-color: inc.$backgroundBoxCoins;
+    color: inc.$numberForValueColor;
+    font-size: 20px;
+    @include inc.textS(inc.$backgroundPageDark)
   }
 
   .value-for-calculation {
     label {
       font-size: 20px;
       margin: 0 10px;
+      @include inc.textS(inc.$backgroundBoxValue);
     }
 
     input[type=number] {
@@ -50,7 +62,26 @@ main {
       font-size: 19px;
       background-color: inc.$backgroundBoxValue;
       color: inc.$numberForValueColor;
-      text-shadow: 1px 1px 1px  rgb(7, 7, 116);
+      @include inc.textS(rgb(7, 7, 116));
     }
+  }
+
+}
+
+span {
+  font-size: 25px;
+  font-weight: bold;
+  color: inc.$moneyColor;
+  @include inc.textS(rgb(7, 7, 116))
+}
+
+article {
+  @include inc.displayFlex(flex, center, center);
+  .real-exchange-rate-display {
+    text-align: center;
+    background-color: inc.$backgroundBoxCoins;
+    width: 35%;
+    height: auto;
+    padding: 7px;
   }
 }
