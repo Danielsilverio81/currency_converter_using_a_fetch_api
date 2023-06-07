@@ -8,17 +8,20 @@
   <title>Conversor de Moedas</title>
 </head>
 <body class="theme">
-  <h1>Conversor de Moedas</h1>
+  <header>
+      <h1>Conversor de Moedas</h1>
+      <button class="theme-change">Light or Dark</button>
+  </header>
   <main>
     <section id="selectArea">
       <div class="currency-to-convert">
         <select name="my-select1" id="my-select1">
-          <option value="usd">USD</option>
+          <option value=""></option>
         </select>
       </div>
       <div class="currency-to-convert">
         <select name="my-select2" id="my-select2">
-          <option value="brl">BRL</option>
+          <option value=""></option>
         </select>
       </div>
     </section>
@@ -29,18 +32,14 @@
       </div>
     </section>
     <section id="showing-result">
-      <div class="showInDisplayCalc">
-        <span>4.96BRL</span>
-      </div>
+      <div class="showInDisplayCalc"></div>
     </section>
     <section id="error-mess">
     </section>
   </main>
   <article id="real-exchange-rate">
-    <div class="real-exchange-rate-display">
-      <span>1 USD = 4.9567 BRL</span>
-    </div>
+    <div class="real-exchange-rate-display"></div>
   </article>
-  <script src="src/js/" type="module"></script>
+  <script src="" type="module"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-import { displayForCalc, fetchCurrenciesAndExchanges, realExchangeRate, secondObjChangeSavedInternally, selectPlace1, selectPlace2, valueForCalculation } from "./home.js"
+import { displayForCalc, fetchCurrenciesAndExchanges, realExchangeRate, selectPlace1, selectPlace2, valueForCalculation } from "./home.js"
+export let secondObjChangeSavedInternally = {}
 
 export function firstCalculateCurrencyConversion(internalObj) {
   const firstCalculate = (valueForCalculation.value * internalObj.conversion_rates[selectPlace2.value])

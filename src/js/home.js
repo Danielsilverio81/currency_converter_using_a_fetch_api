@@ -1,5 +1,6 @@
 import { calculateAfterFirstInputChange, calculateAfterSecondInputChange, firstCalculateCurrencyConversion } from "./calculate.js"
 import { createErrorMessage, getErrorMessage } from "./errorMess.js"
+import { activeBtn } from "./lightDarkBtn.js"
 import { setToRenderOptions } from "./renderOptionsAndSelected.js"
 
 export let changeSavedInternally = {}
@@ -37,6 +38,7 @@ export async function execute() {
   firstCalculateCurrencyConversion(changeSavedInternally)
   calculateAfterSecondInputChange(changeSavedInternally)
   calculateAfterFirstInputChange()
+  activeBtn()
 }
 
 document.addEventListener('DOMContentLoaded', execute())

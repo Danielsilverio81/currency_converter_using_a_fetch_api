@@ -7,25 +7,57 @@ body {
   color: inc.$backgroundPageDark;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
+  transition: 0.1s;
+}
 
-  h1 {
-    width: 60%;
-    margin: 30px auto;
-    font-size: 48px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-align: center;
-    border-bottom: 2px solid inc.$numberForValueColor;
-    @include inc.textS(inc.$backgroundBoxValue);
-  }
+header {
+    h1 {
+        position: relative;
+        width: 52%;
+        margin: 1.87em auto;
+        font-size: inc.$fontSh1;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-align: center;
+        border-bottom: 2px solid inc.$numberForValueColor;
+        @include inc.textS(inc.$backgroundBoxValue);
+      }
+
+      .theme-change {
+        padding: 10px;
+        position: absolute;
+        background-color: inc.$backgroundPageDark;
+        color: inc.$backgroundPageLight;
+        border-radius: inc.$radius;
+        border: none;
+        font-size: inc.$fontSDefault;
+        left: 20px;
+        top: 560px;
+        cursor: pointer;
+        &:hover {
+            color: inc.$backgroundBoxValue;
+            background-color: inc.$backgroundBoxCoins;
+        }
+    }
 }
 
 .dark {
     background-color: inc.$backgroundPageDark;
     color: inc.$lettersColorDark;
 
-  .my-select1, .my-select2 {
-    background-color: inc.$backgroundBoxCoins;
+  .theme-change {
+    background-color: inc.$backgroundPageLight;
+    color: inc.$backgroundPageDark
+  }
+
+  select {
+    background-color: inc.$backgroundBoxValue;
+  }
+
+  article {
+    .real-exchange-rate-display {
+        background-color: inc.$backgroundBoxValue;
+    }
   }
 }
 
@@ -33,7 +65,7 @@ main {
   padding-top: 100px;
   @include inc.displayFlex(flex, center, center);
   flex-direction: column;
-  gap: 20px;
+  gap: 0.625em;
 
   #selectArea {
     @include inc.displayFlex(flex, center, center);
@@ -45,23 +77,28 @@ main {
     padding: 15px;
     background-color: inc.$backgroundBoxCoins;
     color: inc.$numberForValueColor;
-    font-size: 20px;
-    @include inc.textS(inc.$backgroundPageDark)
+    font-size: inc.$fontS;
+    @include inc.textS(inc.$backgroundPageDark);
+    border-radius: inc.$radius;
+    cursor: pointer;
   }
 
   .value-for-calculation {
     label {
-      font-size: 20px;
-      margin: 0 10px;
+      font-size: inc.$fontS;
+      margin: 0 0.625em;
+      cursor: pointer;
       @include inc.textS(inc.$backgroundBoxValue);
     }
 
     input[type=number] {
       width: 60px;
       padding: 6px;
-      font-size: 19px;
+      font-size: inc.$fontS;
       background-color: inc.$backgroundBoxValue;
       color: inc.$numberForValueColor;
+      border-radius: inc.$radius;
+      cursor: pointer;
       @include inc.textS(rgb(7, 7, 116));
     }
   }
@@ -69,7 +106,7 @@ main {
 }
 
 span {
-  font-size: 25px;
+  font-size: inc.$fontS;
   font-weight: bold;
   color: inc.$moneyColor;
   @include inc.textS(rgb(7, 7, 116))
@@ -84,4 +121,12 @@ article {
     height: auto;
     padding: 7px;
   }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    header {h1 {font-size: 1.93em; width: 100%;}}
+    main {.value-for-calculation {label {font-size: inc.$fontSDefault;}
+    input[type=number] {font-size: inc.$fontSDefault; width: 46px;}}
+    select {width: 99%; font-size: inc.$fontSDefault; padding: 11px;}}
+    span {font-size: inc.$fontSDefault;}
 }

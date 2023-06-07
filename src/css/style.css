@@ -9,24 +9,50 @@ body {
   color: #1C1C1C;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
+  transition: 0.1s;
 }
-body h1 {
-  width: 60%;
-  margin: 30px auto;
-  font-size: 48px;
+
+header h1 {
+  position: relative;
+  width: 52%;
+  margin: 1.87em auto;
+  font-size: 2.93em;
   font-weight: bold;
   letter-spacing: 0.1em;
   text-align: center;
   border-bottom: 2px solid #008B45;
   text-shadow: 1px 1px 1px #EEE8AA;
 }
+header .theme-change {
+  padding: 10px;
+  position: absolute;
+  background-color: #1C1C1C;
+  color: #CDC1C5;
+  border-radius: 0.625em;
+  border: none;
+  font-size: 1em;
+  left: 20px;
+  top: 560px;
+  cursor: pointer;
+}
+header .theme-change:hover {
+  color: #EEE8AA;
+  background-color: #6495ED;
+}
 
 .dark {
   background-color: #1C1C1C;
   color: #F0FFFF;
 }
-.dark .my-select1, .dark .my-select2 {
-  background-color: #6495ED;
+.dark .theme-change {
+  background-color: #CDC1C5;
+  color: #1C1C1C;
+}
+.dark select {
+  background-color: #EEE8AA;
+}
+.dark article .real-exchange-rate-display {
+  background-color: #EEE8AA;
 }
 
 main {
@@ -35,7 +61,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 0.625em;
 }
 main #selectArea {
   display: flex;
@@ -48,25 +74,30 @@ main select {
   padding: 15px;
   background-color: #6495ED;
   color: #008B45;
-  font-size: 20px;
+  font-size: 1.26em;
   text-shadow: 1px 1px 1px #1C1C1C;
+  border-radius: 0.625em;
+  cursor: pointer;
 }
 main .value-for-calculation label {
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 1.26em;
+  margin: 0 0.625em;
+  cursor: pointer;
   text-shadow: 1px 1px 1px #EEE8AA;
 }
 main .value-for-calculation input[type=number] {
   width: 60px;
   padding: 6px;
-  font-size: 19px;
+  font-size: 1.26em;
   background-color: #EEE8AA;
   color: #008B45;
+  border-radius: 0.625em;
+  cursor: pointer;
   text-shadow: 1px 1px 1px rgb(7, 7, 116);
 }
 
 span {
-  font-size: 25px;
+  font-size: 1.26em;
   font-weight: bold;
   color: #00FF7F;
   text-shadow: 1px 1px 1px rgb(7, 7, 116);
@@ -83,6 +114,28 @@ article .real-exchange-rate-display {
   width: 35%;
   height: auto;
   padding: 7px;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  header h1 {
+    font-size: 1.93em;
+    width: 100%;
+  }
+  main .value-for-calculation label {
+    font-size: 1em;
+  }
+  main .value-for-calculation input[type=number] {
+    font-size: 1em;
+    width: 46px;
+  }
+  main select {
+    width: 99%;
+    font-size: 1em;
+    padding: 11px;
+  }
+  span {
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
