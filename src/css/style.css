@@ -15,7 +15,7 @@ body {
 header h1 {
   position: relative;
   width: 52%;
-  margin: 1.87em auto;
+  margin: 1.3em auto;
   font-size: 2.93em;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -56,7 +56,7 @@ header .theme-change:hover {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,6 +95,24 @@ main .value-for-calculation input[type=number] {
   cursor: pointer;
   text-shadow: 1px 1px 1px rgb(7, 7, 116);
 }
+main .alert-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 0.625em;
+  padding: 15px;
+  width: 90%;
+  height: auto;
+  background-color: #d82b2b;
+}
+main .alert-error .btn-delete-mess {
+  background-color: #6495ED;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 0.625em;
+}
 
 span {
   font-size: 1.26em;
@@ -111,7 +129,7 @@ article {
 article .real-exchange-rate-display {
   text-align: center;
   background-color: #6495ED;
-  width: 35%;
+  width: 30%;
   height: auto;
   padding: 7px;
 }
@@ -135,6 +153,10 @@ article .real-exchange-rate-display {
   }
   span {
     font-size: 1em;
+  }
+  header .theme-change {
+    top: 550px;
+    font-size: 0.6em;
   }
 }
 

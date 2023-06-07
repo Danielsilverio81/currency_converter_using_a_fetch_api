@@ -14,7 +14,7 @@ header {
     h1 {
         position: relative;
         width: 52%;
-        margin: 1.87em auto;
+        margin: 1.30em auto;
         font-size: inc.$fontSh1;
         font-weight: bold;
         letter-spacing: 0.1em;
@@ -62,7 +62,7 @@ header {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 80px;
   @include inc.displayFlex(flex, center, center);
   flex-direction: column;
   gap: 0.625em;
@@ -103,6 +103,24 @@ main {
     }
   }
 
+  .alert-error {
+    @include inc.displayFlex(flex, center, center);
+    margin: 10px;
+    border-radius: inc.$radius;
+    padding: 15px;
+    width: 90%;
+    height: auto;
+    background-color: inc.$errorMess;
+
+    .btn-delete-mess {
+        background-color: inc.$backgroundBoxCoins;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+        border-radius: inc.$radius;
+    }
+  }
+
 }
 
 span {
@@ -117,7 +135,7 @@ article {
   .real-exchange-rate-display {
     text-align: center;
     background-color: inc.$backgroundBoxCoins;
-    width: 35%;
+    width: 30%;
     height: auto;
     padding: 7px;
   }
@@ -129,4 +147,5 @@ article {
     input[type=number] {font-size: inc.$fontSDefault; width: 46px;}}
     select {width: 99%; font-size: inc.$fontSDefault; padding: 11px;}}
     span {font-size: inc.$fontSDefault;}
+    header {.theme-change {top: 550px; font-size: 0.6em;}}
 }

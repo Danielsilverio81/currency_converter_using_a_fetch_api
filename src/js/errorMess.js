@@ -14,7 +14,8 @@ export function createErrorMessage(messageError) {
   const btnDeleteMessage = document.createElement('button')
   btnDeleteMessage.className = 'btn-delete-mess'
   btnDeleteMessage.innerText = 'X'
-  errorSpace.append(div, btnDeleteMessage)
+  div.append(btnDeleteMessage)
+  errorSpace.append(div)
   deleteMessageError()
 }
 
