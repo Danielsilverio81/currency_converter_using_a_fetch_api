@@ -1,3 +1,5 @@
+
+import '../sass/style.scss'
 import { calculateAfterFirstInputChange, calculateAfterSecondInputChange, firstCalculateCurrencyConversion } from "./calculate.js"
 import { createErrorMessage, getErrorMessage } from "./errorMess.js"
 import { activeBtn } from "./lightDarkBtn.js"
@@ -25,7 +27,7 @@ export async function fetchCurrenciesAndExchanges(coinSymbol) {
       throw new Error('Sua conexão com a internet teve algum problema!')
     } else {
       return response
-    } 
+    }
   } catch (error) {
     createErrorMessage(error.message)
   }

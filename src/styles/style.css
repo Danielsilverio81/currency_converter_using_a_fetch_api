@@ -12,27 +12,37 @@ body {
   transition: 0.1s;
 }
 
+header {
+  padding: 1.2em 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+header .content-box {
+  width: 59%;
+  display: flex;
+}
 header h1 {
-  position: relative;
-  width: 52%;
-  margin: 1.3em auto;
+  width: 100%;
   font-size: 2.93em;
   font-weight: bold;
-  letter-spacing: 0.1em;
-  text-align: center;
-  border-bottom: 2px solid #008B45;
   text-shadow: 1px 1px 1px #EEE8AA;
 }
+header .dollar {
+  margin-right: 142px;
+  width: 70px;
+}
 header .theme-change {
+  margin: 0 10px;
+  width: 90px;
+  height: 40px;
   padding: 10px;
-  position: absolute;
   background-color: #1C1C1C;
   color: #CDC1C5;
   border-radius: 0.625em;
   border: none;
   font-size: 1em;
-  left: 20px;
-  top: 560px;
   cursor: pointer;
 }
 header .theme-change:hover {
@@ -56,7 +66,7 @@ header .theme-change:hover {
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +123,12 @@ main .alert-error .btn-delete-mess {
   padding: 6px;
   border-radius: 0.625em;
 }
+main .graphic {
+  margin: 7px;
+  width: 100%;
+  max-width: 150px;
+  height: 100px;
+}
 
 span {
   font-size: 1.26em;
@@ -134,10 +150,20 @@ article .real-exchange-rate-display {
   padding: 7px;
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
+@media (min-width: 320px) and (max-width: 857px) {
+  body {
+    font-size: 1em;
+  }
   header h1 {
-    font-size: 1.93em;
+    font-size: 1.7em;
     width: 100%;
+  }
+  header .theme-change {
+    font-size: 0.7em;
+  }
+  header .dollar {
+    width: 28px;
+    margin-right: 80px;
   }
   main .value-for-calculation label {
     font-size: 1em;
@@ -147,16 +173,20 @@ article .real-exchange-rate-display {
     width: 46px;
   }
   main select {
-    width: 99%;
+    width: 97%;
     font-size: 1em;
     padding: 11px;
   }
   span {
     font-size: 1em;
   }
-  header .theme-change {
-    top: 550px;
-    font-size: 0.6em;
+}
+@media (max-width: 777px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  header .dollar {
+    display: none;
   }
 }
 

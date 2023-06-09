@@ -11,28 +11,39 @@ body {
 }
 
 header {
+    padding: 1.2em 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+    .content-box {
+        width: 59%;
+        display: flex;
+    }
+
     h1 {
-        position: relative;
-        width: 52%;
-        margin: 1.30em auto;
+        width: 100%;
         font-size: inc.$fontSh1;
         font-weight: bold;
-        letter-spacing: 0.1em;
-        text-align: center;
-        border-bottom: 2px solid inc.$numberForValueColor;
         @include inc.textS(inc.$backgroundBoxValue);
       }
 
+      .dollar {
+        margin-right: 142px;
+        width: 70px;
+    }
+
       .theme-change {
+        margin: 0 10px;
+        width: 90px;
+        height: 40px;
         padding: 10px;
-        position: absolute;
         background-color: inc.$backgroundPageDark;
         color: inc.$backgroundPageLight;
         border-radius: inc.$radius;
         border: none;
         font-size: inc.$fontSDefault;
-        left: 20px;
-        top: 560px;
         cursor: pointer;
         &:hover {
             color: inc.$backgroundBoxValue;
@@ -62,7 +73,7 @@ header {
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 70px;
   @include inc.displayFlex(flex, center, center);
   flex-direction: column;
   gap: 0.625em;
@@ -121,6 +132,12 @@ main {
     }
   }
 
+  .graphic {
+    margin: 7px;
+    width: 100%;
+    max-width: 150px;
+    height: 100px;
+ }
 }
 
 span {
@@ -141,11 +158,19 @@ article {
   }
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
-    header {h1 {font-size: 1.93em; width: 100%;}}
+@media (min-width: 320px) and (max-width: 857px) {
+    body {font-size: 1em;}
+    header {h1 {font-size: 1.7em; width: 100%;} 
+    .theme-change {font-size: 0.7em;}
+    .dollar {width: 28px; margin-right: 80px;}}
     main {.value-for-calculation {label {font-size: inc.$fontSDefault;}
     input[type=number] {font-size: inc.$fontSDefault; width: 46px;}}
-    select {width: 99%; font-size: inc.$fontSDefault; padding: 11px;}}
+    select {width: 97%; font-size: inc.$fontSDefault; padding: 11px;}}
     span {font-size: inc.$fontSDefault;}
-    header {.theme-change {top: 550px; font-size: 0.6em;}}
+}
+
+@media (max-width: 777px) {
+    header { h1 {font-size: 1.5em;}
+    .dollar {display: none;}
+ }
 }
