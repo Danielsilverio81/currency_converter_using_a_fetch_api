@@ -5,21 +5,30 @@ module.exports = {
   entry: {
     index: './src/js/home.js'
   },
-  mode: 'development',
+  mode: 'production',
   module: {
-    rules: [{
-      test: /\.css$/,
-      use: [MiniCssExtractPlugin.loader, 'css-loader']
+    rules: [
+        {
+      test: /\.s[ac]ss$/i,
+      use: [MiniCssExtractPlugin.loader, 'css-loader',{
+        loader: "sass-loader",
+        options: {
+          sourceMap: true,
+          sassOptions: {
+            outputStyle: "compressed",
+          },
+        },
+      }]
     }, {
       test: /\.js$/,
       use: ['babel-loader']
     }]
   },
   plugins: [new MiniCssExtractPlugin({
-    filename: 'index.css'
+    filename: 'style.css'
   })],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './public')
   }
 }
