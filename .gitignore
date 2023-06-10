@@ -131,3 +131,5 @@ dist
 .pnp.*
 .editorconfig
 package.json
+webpack.config.js
+babel.config.js
