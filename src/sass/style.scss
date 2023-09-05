@@ -29,11 +29,6 @@ header {
         @include inc.textS(inc.$backgroundBoxValue);
       }
 
-      .dollar {
-        margin-right: 142px;
-        width: 70px;
-    }
-
       .theme-change {
         margin: 0 10px;
         width: 90px;
@@ -162,7 +157,7 @@ article {
     body {font-size: 1em;}
     header {h1 {font-size: 1.7em; width: 100%;} 
     .theme-change {font-size: 0.7em;}
-    .dollar {width: 28px; margin-right: 80px;}}
+    }
     main {.value-for-calculation {label {font-size: inc.$fontSDefault;}
     input[type=number] {font-size: inc.$fontSDefault; width: 46px;}}
     select {width: 97%; font-size: inc.$fontSDefault; padding: 11px;}}
@@ -171,6 +166,5 @@ article {
 
 @media (max-width: 777px) {
     header { h1 {font-size: 1.5em;}
-    .dollar {display: none;}
  }
 }
