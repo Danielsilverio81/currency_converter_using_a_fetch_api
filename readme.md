@@ -118,6 +118,12 @@ modify the scripts part in the package.json file and insert the code below
     "dev": "webpack serve"
   }
 ```
+### Configuring the .env file
+
+1. Rename the `.env.example` file to `.env`.
+2. Fill in the environment variables in the `.env` file with the correct information.
+3. Make sure not to share your sensitive information on the GitHub repository.
+
 ## 4 Run project
 ### To run the project locally, just run the command below:
 To run only the build:

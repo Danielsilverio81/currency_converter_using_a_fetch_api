@@ -1,5 +1,7 @@
 
 import '../sass/style.scss'
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { calculateAfterFirstInputChange, calculateAfterSecondInputChange, firstCalculateCurrencyConversion } from "./calculate.js"
 import { createErrorMessage, getErrorMessage } from "./errorMess.js"
 import { activeBtn } from "./lightDarkBtn.js"
@@ -16,7 +18,8 @@ export const valueForCalculation = document.getElementById('input-number')
 
 
 export async function fetchCurrenciesAndExchanges(coinSymbol) {
-  const url = `https://v6.exchangerate-api.com/v6/fa425e2a3e5522ddb87cc6c2/latest/${coinSymbol}`
+  const apiKey = process.env.API_KEY;
+  const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${coinSymbol}`
   try {
     const coins = await fetch(url)
     const response = await coins.json()
