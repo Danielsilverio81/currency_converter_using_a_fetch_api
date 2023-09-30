@@ -1,7 +1,5 @@
 
 import '../sass/style.scss'
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
 import { calculateAfterFirstInputChange, calculateAfterSecondInputChange, firstCalculateCurrencyConversion } from "./calculate.js"
 import { createErrorMessage, getErrorMessage } from "./errorMess.js"
 import { activeBtn } from "./lightDarkBtn.js"
